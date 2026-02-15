@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RhizomeAI Wikipedia Map</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="search-panel">
+        <form id="search-form" autocomplete="off">
+          <div class="search-box">
+            <input id="search-input" name="q" type="text" aria-label="Search query" />
+            <span class="giant-cursor" aria-hidden="true">|</span>
+          </div>
+        </form>
+        <h1 class="logo"><span class="logo-red">Rhizome</span><span class="logo-ai">AI</span></h1>
+      </section>
+
+      <section class="workspace">
+        <section class="graph-panel panel">
+          <header class="graph-toolbar">
+            <div class="mode-switch" role="group" aria-label="Graph mode switch">
+              <button id="mode-rhizomatic" class="active circle-btn" type="button">RHIZOME</button>
+              <button id="mode-arborescent" class="circle-btn" type="button">TREE</button>
+            </div>
+            <div class="reset-controls">
+              <button id="reset-view" class="reset-btn" type="button" aria-label="Reset">↺</button>
+              <button id="reset-mode" class="mode-btn" type="button" aria-label="Reset mode">KEEP</button>
+            </div>
+          </header>
+          <div class="graph-canvas">
+            <svg id="graph" viewBox="0 0 1200 760" aria-label="Wikipedia graph"></svg>
+            <div id="link-panel" class="link-panel">
+              <div class="link-title">ARTICLE LINKS</div>
+              <ul id="link-list"></ul>
+            </div>
+          </div>
+        </section>
+
+        <aside class="chat-panel panel">
+          <h2>RhizomeChat</h2>
+          <div id="chat-log" aria-live="polite"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
