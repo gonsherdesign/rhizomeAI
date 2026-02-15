@@ -28,7 +28,7 @@ body {
   height: calc(100vh - 32px);
   min-height: 720px;
   display: grid;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: auto 1fr auto;
   gap: 14px;
 }
 
@@ -265,6 +265,16 @@ button {
   margin: 0;
   font-size: 1.05rem;
   font-weight: 900;
+}
+
+.update-box {
+  padding: 10px 12px;
+}
+
+.update-box p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.35;
 }
 
 #chat-log {
